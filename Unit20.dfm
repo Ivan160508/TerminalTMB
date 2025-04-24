@@ -1,0 +1,47 @@
+object Autoexpander: TAutoexpander
+  Left = 681
+  Top = 391
+  BorderIcons = []
+  BorderStyle = bsSingle
+  Caption = 'Event'
+  ClientHeight = 81
+  ClientWidth = 615
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Bt1: TButton
+    Left = 12
+    Top = 46
+    Width = 595
+    Height = 25
+    Caption = 'Close'
+    TabOrder = 0
+    OnClick = Bt1Click
+  end
+  object reqMessage: TStaticText
+    Left = 12
+    Top = 12
+    Width = 593
+    Height = 23
+    Alignment = taCenter
+    AutoSize = False
+    BorderStyle = sbsSunken
+    Caption = 'reqMessage'
+    Color = clYellow
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 1
+  end
+end
