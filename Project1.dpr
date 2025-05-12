@@ -9,7 +9,7 @@ uses
   Unit6 in 'Unit6.pas' {OpenPortError},
   Unit7 in 'Unit7.pas' {Form7},
   Unit8 in 'Unit8.pas' {Form8},
-  Unit11 in 'Unit11.pas' {DataSendLog},
+  DataSendLog_ in 'DataSendLog_.pas' {DataSendLog},
   Unit12 in 'Unit12.pas' {Settings},
   Unit13 in 'Unit13.pas' {FormLogName},
   Unit14 in 'Unit14.pas' {OpenLogFile},
@@ -43,7 +43,7 @@ uses
   Unit44 in 'Unit44.pas' {FormSetSendData},
   Unit3 in 'Unit3.pas' {FormPacketsCNT},
   Unit9 in 'Unit9.pas' {FormParserASCII},
-  Unit10 in 'Unit10.pas' {FormSetParsASCII},
+  SetParsASCII in 'SetParsASCII.pas' {FormSetParsASCII},
   Unit50 in 'Unit50.pas' {FormParserASCIILog},
   Unit151 in 'Unit151.pas' {FormWarnMG},
   Unit153 in 'Unit153.pas' {FormSaveBufData};

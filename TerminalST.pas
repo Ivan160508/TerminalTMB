@@ -1688,8 +1688,8 @@ var
 
   implementation
 
-uses Unit2, Unit3, Unit4, Unit5, Unit6, Unit7, Unit9, Unit11, Unit12,
-  Unit13, Unit14, Unit15, Unit16, Unit17, Unit18, Unit10, Unit19, Unit20,
+uses Unit2, Unit3, Unit4, Unit5, Unit6, Unit7, Unit9, DataSendLog_, Unit12,
+  Unit13, Unit14, Unit15, Unit16, Unit17, Unit18, SetParsASCII, Unit19, Unit20,
   Unit22, Unit23, FormJ, Unit24, Unit27, Unit29, Unit30, Unit31, Unit32,
   Unit35, Unit37, Unit41, Unit42;
 

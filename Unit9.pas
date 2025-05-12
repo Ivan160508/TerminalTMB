@@ -259,7 +259,7 @@ var
   CntLineInFile : Cardinal;
 implementation
 
-uses Unit24, Unit10, Unit50, Unit26, Unit36, Unit37;
+uses Unit24, SetParsASCII, Unit50, Unit26, Unit36, Unit37;
 
 {$R *.dfm}
 

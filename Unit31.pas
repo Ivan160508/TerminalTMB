@@ -60,7 +60,7 @@ var
 
 implementation
 
-uses Unit11;
+uses DataSendLog_;
 
 {$R *.dfm}
 
