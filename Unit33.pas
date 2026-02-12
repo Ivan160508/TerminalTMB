@@ -1553,19 +1553,7 @@ begin
       //ItemParam[i].Panel.Caption := ParserHEX.SettParser[i].NameParam;
     end;
 
-  //for i:= 0 to 15 do
-  //  begin
-  //    if ParserHEX.SettParser[i].isUseParser then
-  //      if ParserHEX.SettParser[i].NameParam <> '' then
-  //        begin
-  //          For j := 1 to CNT_PARAM do
-  //            begin
-  //              ItemParam[j].NumParam[ItemParam[j].indexParam] := i;
-  //              SetActiveItems(j , false);
-  //              inc(ItemParam[j].indexParam);
-  //            end;
-  //        end;
-  //  end;
+
 
   for numItem := 0 to CNT_PARAM-1 do
     begin
@@ -1604,6 +1592,11 @@ begin
             begin
               ItemParam[numItem].ChBoxBold.Checked := True;
               ItemParam[numItem].Bold := 3;
+            end
+          else
+            begin
+              ItemParam[numItem].ChBoxBold.Checked := False;
+              ItemParam[numItem].Bold := 1;
             end;
 
           ItemParam[numItem].NameParam.Color := ParserHEX.SettParser[numItem].Color;
@@ -2015,10 +2008,14 @@ var numItem, i : Integer;
     for numItem := 0 to CNT_PARAM-1 do
       begin
         if ItemParam[numItem].ChBoxBold.Checked then
-          ParserHEX.SettParser[numItem].res1[9] := ParserHEX.SettParser[numItem].res1[9] or $00000200;
+          ParserHEX.SettParser[numItem].res1[9] := ParserHEX.SettParser[numItem].res1[9] or $00000200
+        else
+          ParserHEX.SettParser[numItem].res1[9] := ParserHEX.SettParser[numItem].res1[9] and $FFFFFDFF;
 
         if ItemParam[numItem].ChIsOutGraph.Checked then
-          ParserHEX.SettParser[numItem].res1[9]  := ParserHEX.SettParser[numItem].res1[9] or $00000100;
+          ParserHEX.SettParser[numItem].res1[9]  := ParserHEX.SettParser[numItem].res1[9] or $00000100
+        else
+          ParserHEX.SettParser[numItem].res1[9]  := ParserHEX.SettParser[numItem].res1[9] and $FFFFFEFF;
 
         ParserHEX.SettParser[numItem].res1[10] := Integer(ItemParam[numItem].Min);
         ParserHEX.SettParser[numItem].res1[11] := Integer(ItemParam[numItem].Max);
