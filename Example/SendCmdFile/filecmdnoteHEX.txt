@@ -1,0 +1,56 @@
+11 22 33 44
+55 66 88 2A
+[delay:]100
+12 FF 89 DE
+ED F0 DE ED F0 DE ED F0 DE ED F0 DE
+00 87 0D 0d ff
+[delay:]1000
+FE 10 23
+[delay:]1000
+88 99 88
+[delay:]1000
+76 78 90
+[delay:]1000
+77 88 99 00 
+11 22 33 44
+55 66 88 2A
+[delay:]100
+12 FF 89 DE
+ED F0 DE ED F0 DE ED F0 DE ED F0 DE
+00 87 0D 0d ff
+[delay:]1000
+FE 10 23
+[delay:]1000
+88 99 88
+[delay:]1000
+76 78 90
+[delay:]1000
+77 88 99 00 
+11 22 33 44
+55 66 88 2A
+[delay:]100
+12 FF 89 DE
+ED F0 DE ED F0 DE ED F0 DE ED F0 DE
+00 87 0D 0d ff
+[delay:]1000
+FE 10 23
+[delay:]1000
+88 99 88
+[delay:]1000
+76 78 90
+[delay:]1000
+77 88 99 00 
+11 22 33 44
+55 66 88 2A
+[delay:]100
+12 FF 89 DE
+ED F0 DE ED F0 DE ED F0 DE ED F0 DE
+00 87 0D 0d ff
+[delay:]1000
+FE 10 23
+[delay:]1000
+88 99 88
+[delay:]1000
+76 78 90
+[delay:]1000
+77 88 99 00 
