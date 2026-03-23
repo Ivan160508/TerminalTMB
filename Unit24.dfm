@@ -3806,7 +3806,7 @@ object FormParser: TFormParser
     object rb18: TRadioButton
       Left = 3
       Top = 8
-      Width = 190
+      Width = 202
       Height = 19
       Caption = 'Use graphics buffers for this parser'
       Color = clYellow

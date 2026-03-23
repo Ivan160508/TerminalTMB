@@ -2,6 +2,7 @@ unit Unit24;
 
 interface
 
+
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, TerminalST, Common, ExtCtrls, DateUtils ;
@@ -796,6 +797,7 @@ begin
     end;
   FormParser.chk8.Checked := ParsersHEXAdd[NumParser].isSyncTime;
   isSyncBuffers := ParsersHEXAdd[NumParser].isSyncTime;
+  FormParser.grp8.Visible := NumParserForGraph = NumParser;
 end;
 
 
@@ -2539,9 +2541,7 @@ begin
   req51.Color := FormSettParser.Color;
 end;
 
-
-
-procedure TFormParser.btn2Click(Sender: TObject);
+procedure ClearBuf;
   var
     i, Param, pars : Cardinal;
   begin
@@ -2564,9 +2564,15 @@ procedure TFormParser.btn2Click(Sender: TObject);
         MinValG[Param]:= 2147483647;
         VisParser[Param].BTGraphClr.Caption := '';
       end;
-    reqtxt1.Caption := '';
+    FormParser.reqtxt1.Caption := '';
     SelectParamForGraph := 16;
   end;
+
+
+procedure TFormParser.btn2Click(Sender: TObject);
+begin
+  ClearBuf;
+end;
 
 procedure TFormParser.BTCopyClick(Sender: TObject);
 var
@@ -3844,9 +3850,12 @@ end;
 
 procedure TFormParser.rb18Click(Sender: TObject);
 begin
+  if NumParserForGraph <> NumParser then
+    ClearBuf;
   NumParserForGraph := NumParser;
   (Sender as TRadioButton).Color := FormParser.Color;
   (Sender as TRadioButton).Hint  := 'Data buffering enabled for list ' + IntToStr(NumParser) +' [ ' + ParsersHEX[NumParser].ParserName + ' ]';
+  grp8.Visible := NumParserForGraph = NumParser;
 end;
 
 procedure TFormParser.Bt73Click(Sender: TObject);
