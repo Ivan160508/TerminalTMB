@@ -3084,7 +3084,7 @@ object FormParser: TFormParser
     Left = 6
     Top = 170
     Width = 937
-    Height = 391
+    Height = 473
     Ctl3D = False
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWindowText

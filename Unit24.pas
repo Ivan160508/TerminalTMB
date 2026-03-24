@@ -798,6 +798,12 @@ begin
   FormParser.chk8.Checked := ParsersHEXAdd[NumParser].isSyncTime;
   isSyncBuffers := ParsersHEXAdd[NumParser].isSyncTime;
   FormParser.grp8.Visible := NumParserForGraph = NumParser;
+
+    FormParser.btn2.Enabled    := NumParserForGraph = NumParser;
+    FormParser.btnLoad.Enabled := not FormParser.chk1.Checked;
+    FormParser.btnSave.Enabled := not FormParser.chk1.Checked;
+    FormParser.chk1.Enabled    := NumParserForGraph = NumParser;
+
 end;
 
 
@@ -2330,6 +2336,12 @@ procedure TFormParser.FormActivate(Sender: TObject);
 
     lst1.Visible := False;
     CntPacket := 0;
+    FormParser.btn2.Enabled    := NumParserForGraph = NumParser;
+    FormParser.btnLoad.Enabled := not FormParser.chk1.Checked;
+    FormParser.btnSave.Enabled := not FormParser.chk1.Checked;
+    FormParser.chk1.Enabled    := NumParserForGraph = NumParser;
+
+    FormParser.Caption := 'Parser HEX ' + ' Parser for buffering : [ ' + IntToStr(NumParserForGraph) + ' ' +   ParsersHEX[NumParser].ParserName + ' ]';
     //SetCurParser();
   end;
 
@@ -3610,6 +3622,9 @@ begin
       SetVisStopTimeStat;
       isEnUpdTimeStartStop := True;
 
+      NumParserForGraph := NumParser;
+      rb18.Checked := True;
+      FormParser.Caption := 'Parser HEX ' + ' Parser for buffering : [ ' + IntToStr(NumParserForGraph) + ' ' +   ParsersHEX[NumParser].ParserName + ' ]';
     end;
 end;
 
@@ -3855,7 +3870,15 @@ begin
   NumParserForGraph := NumParser;
   (Sender as TRadioButton).Color := FormParser.Color;
   (Sender as TRadioButton).Hint  := 'Data buffering enabled for list ' + IntToStr(NumParser) +' [ ' + ParsersHEX[NumParser].ParserName + ' ]';
+
+  FormParser.btn2.Enabled    := true;
+  FormParser.btnLoad.Enabled := not FormParser.chk1.Checked;
+  FormParser.btnSave.Enabled := not FormParser.chk1.Checked;
+  FormParser.chk1.Enabled    := true;
+
   grp8.Visible := NumParserForGraph = NumParser;
+
+  FormParser.Caption := 'Parser HEX ' + ' Parser for buffering : [ ' + IntToStr(NumParserForGraph) + ' ' +   ParsersHEX[NumParser].ParserName + ' ]';
 end;
 
 procedure TFormParser.Bt73Click(Sender: TObject);
